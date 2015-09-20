@@ -32,7 +32,7 @@
   <% @posts.each do |post| %>
       <div class="post">
         <h3><%= link_to post.title, post_path(post) %></h3>
-        <p class="date"><%= post.created_at.strftime("%A,%b,%d") %></p>
+        <p class="date"><%= post.created_at.strftime("%A %b,%d") %></p>
 
       </div>
   <%end  %>
@@ -46,7 +46,7 @@
     <h3><a href="#">Unicasts</a></h3>
     <p class="date">Friday April 10th</p>
 
-    <h3><a href="#">Child Community</a></h3>
+    <h3><a href="#">Child Community</a> </h3>
     <p class="date">Friday Sep 1st</p>
 
     <h3><a href="#">12 in 12 challenge</a></h3>
