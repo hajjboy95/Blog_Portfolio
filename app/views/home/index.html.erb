@@ -35,7 +35,7 @@
         <p class="date"><%= post.created_at.strftime("%A %b,%d") %></p>
 
       </div>
-    <%end  %>
+    <% end  %>
 
   </div>
 
@@ -43,14 +43,14 @@
   <div class="col-3 homepage_content">
     <h2>Stuff I've Built</h2>
     <hr>
-    <h3><a href="#">Unicasts</a></h3>
-    <p class="date">Friday April 10th</p>
 
-    <h3><a href="#">Child Community</a> </h3>
-    <p class="date">Friday Sep 1st</p>
+    <% @projects.each do |project| %>
+        <div class="post">
+          <h3><%= link_to project.title, post_path(project) %></h3>
+          <p class="date"><%= project.created_at.strftime("%A %b,%d") %></p>
 
-    <h3><a href="#">12 in 12 challenge</a></h3>
-    <p class="date">Friday May 10th</p>
+        </div>
+    <% end  %>
 
   </div>
 </div>
