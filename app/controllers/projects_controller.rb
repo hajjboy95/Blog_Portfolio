@@ -27,7 +27,35 @@ class ProjectsController < ApplicationController
 
   end
 
+  def edit
+
+  end
+
+  def update
+    if @project.update(project_params)
+      redirect_to @project , notice: "Nice update"
+
+    else
+      render :edit
+    end
+
+  end
+
+  def destroy
+
+    if @project.destroy
+      redirect_to projects_path , notice: "sucessfully deleted that shit"
+
+    else
+      render 'projects/show'
+    end
+
+
+  end
+
+
   private
+
 
   def project_params
 
