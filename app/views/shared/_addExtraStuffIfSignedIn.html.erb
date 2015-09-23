@@ -1,0 +1,8 @@
+<% if user_signed_in? %>
+    <div id="admin_links">
+      <%= link_to  "Edit Article" ,edit_post_path(var)   %>
+      <%= link_to "Delete Article"  , post_path(var) , method: :delete , data: {confirm: "Are you sure?"} %>
+
+
+    </div>
+<%end %>

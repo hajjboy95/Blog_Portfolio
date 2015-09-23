@@ -10,6 +10,8 @@
     <%= markdown(@post.content) %>
   </div>
 
+  <%= render 'shared/addExtraStuffIfSignedIn' , var:@post %>
+
 
   <div id="share_box">
     <p>Share the <%= @post.title %> post</p>
@@ -25,5 +27,5 @@
 </div>
 
 
-<%= link_to  "Edit" ,edit_post_path(@post)   %>
+
 
