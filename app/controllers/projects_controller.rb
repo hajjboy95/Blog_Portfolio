@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
 
   before_action :find_project , only:[:show,:edit,:update,:destroy]
+  protect_against_login
   def index
     @projects = Project.all.order("created_at DESC")
 
